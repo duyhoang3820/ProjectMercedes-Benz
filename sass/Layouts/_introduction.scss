@@ -1,0 +1,30 @@
+.introduction {
+    background-color: #000000;
+    .introduction__content {
+        width: 85%;
+        margin: auto;
+        padding: 80px 0;
+        color: $color-white-0;
+        .introduction__text {
+            margin-right: 27% !important;
+            h3 {
+                @include styteText($color-white-0, $fs-4 - 10, $fw-normal);
+                
+            }
+            p {
+                font-family: MBCorpo Text, DaimlerCS-Regular, Helvetica, Arial, sans-serif;
+                @include styteText($color-white-0, $fs-1 + 1, $fw-normal);
+            }
+            button {
+                background-color: $color-blue-1;
+                border: 1px solid $color-blue-1;
+                border-radius: 1px;
+                color: #fff;
+                padding: 5px 12px 6px 12px;
+                &:hover {
+                    background-color: #0088c6;
+                }
+            }
+        }
+    }
+}

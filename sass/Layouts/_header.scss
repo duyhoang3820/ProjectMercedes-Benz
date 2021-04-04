@@ -1,0 +1,125 @@
+.header {
+    background-color: #000000;
+    .header__content {
+        width: 95%;
+        height: 108px;
+        margin: auto;
+        justify-content: space-between;
+    }
+    .header__left {
+        display: flex;
+        justify-content: space-around;
+        .logo2 {
+            vertical-align: middle;
+        }
+        .logo2 {
+            margin-right: $mg-1;
+            margin-top: $mg-2 + 5;
+            vertical-align: middle;
+        }
+    }
+    .header__right {
+        .provider {
+            text-align: right;
+            margin-right: $mg-1;
+            a {
+                @include styteText($color-white-0, $fs-0 + 1, $fw-normal);
+                text-decoration: none;
+                &:hover {
+                    color: $color-blue-1;
+                    cursor: pointer;
+                }
+                &:last-child {
+                    padding: $pd-2 + 5;
+                }
+            }
+        }
+        .list {
+            .navbar-nav {
+                justify-content: right !important;
+                margin-left: $mg-2 + 5;
+                padding-top: $pd-2;
+                .nav-item {
+                    a {
+                        color: $color-white-0;
+                        text-decoration: none;
+                        list-style: none;
+                        padding: $pd-1 $pd-2;
+                        &:hover {
+                            color: $color-blue-1;
+                        }
+                    }
+                }
+            }
+        }
+        .menu {
+            margin-top: 15px;
+        }
+    }
+}
+
+@include responsive("extra-large") {
+    .header {
+        height: 97px;
+    }
+    .navbar-nav {
+        display: none;
+    }
+    .header__left {
+        position: relative;
+        .logo1 {
+            position: absolute;
+            height: 64px;
+            left: 5px;
+            top: -20px;
+            width: 64px;
+        }
+        .logo2 {
+            position: absolute;
+            height: 28px;
+            left: 130px;
+            top: -20px;
+            width: 112px;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .navbar-nav {
+        display: none;
+    }
+}
+
+@include responsive("large") {
+    .header {
+        height: 80px;
+    }
+    .header__left {
+        position: relative;
+        .logo1 {
+            height: 44px;
+            left: 5px;
+            top: -15px;
+            position: absolute;
+            width: 44px;
+        }
+        .logo2 {
+            height: 23px;
+            left: 90px;
+            top: -30px;
+            position: absolute;
+            width: 91px;
+        }
+    }
+}
+
+@include responsive("medium") {
+    .provider {
+        .privacy {
+            display: none;
+        }
+        .deutsch {
+            padding: 0 !important;
+        }
+    }
+}

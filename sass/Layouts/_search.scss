@@ -1,0 +1,25 @@
+.search {
+    background-color: #141414;
+    .form-control {
+        background: #ececec;
+        border: 1px solid #ececec;
+        color: #333;
+        display: inline-block;
+        font-family: MBCorpo Text, DaimlerCS-Regular, Helvetica, Arial, sans-serif;
+        font-size: 1.285rem;
+        height: 2.855rem;
+        line-height: 1.715rem;
+        padding: 0.355rem 1rem 0.215rem 1rem;
+        vertical-align: baseline;
+        width: calc(100% - 4.425rem);
+        box-shadow: none;
+    }
+    .input-group-text {
+        a {
+            color: black;
+            &:hover {
+                color: rgba(51, 51, 51, 0.8);
+            }
+        }
+    }
+}

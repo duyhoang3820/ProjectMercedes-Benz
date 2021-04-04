@@ -1,0 +1,82 @@
+.footer {
+    background-color: $base-color;
+    padding-top: $pd-2;
+    .footer__content {
+        margin: auto;
+        padding-top: $pd-2;
+        .footer__left {
+            ul {
+                display: flex;
+                li {
+                    list-style: none;
+                    a {
+                        text-decoration: none;
+                        @include styteText($color-white-0, $fs-0 + 1, $fw-normal);
+                    }
+                    .deutsch {
+                        @include styteText($theme-primary, $fs-0 + 1, $fw-normal);
+                        &:hover {
+                            @include styteText($theme-active, $fs-0 + 1, $fw-normal);
+                        }
+                        &::after {
+                            background: $theme-disabled;
+                            content: "";
+                            display: inline-block;
+                            height: 11px;
+                            margin-left: 13px;
+                            margin-right: 13px;
+                            position: relative;
+                            top: 1px;
+                            width: 1px;
+                        }
+                    }
+                }
+            }
+        }
+        .footer__right {
+            .legal {
+                padding: 0;
+                ul {
+                    display: flex;
+                    justify-content: space-around;
+                    li {
+                        list-style: none;
+                        a {
+                            @include styteText($link-on-base-color, $fs-0 - 1, $fw-normal);
+                            text-decoration: none;
+                            &:hover {
+                                @include styteText($theme-primary, $fs-0 - 1, $fw-normal);
+                            }
+                        }
+                    }
+                }
+            }
+            .contact {
+                padding: 0;
+                ul {
+                    display: flex;
+                    justify-content: space-around;
+                    li {
+                        list-style: none;
+                        a {
+                            @include styteText($link-on-base-color, $fs-0 - 1, $fw-normal);
+                            text-decoration: none;
+                            &:hover {
+                                @include styteText($theme-primary, $fs-0 - 1, $fw-normal);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include responsive ("medium"){
+    .footer__left{
+       .footer__left-content{
+           justify-content: center;
+       }
+    }
+}

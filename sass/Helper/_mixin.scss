@@ -1,0 +1,40 @@
+@mixin styteText($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+@mixin styleButton($bg-color, $bd-color, $pd-y, $pd-x, $r) {
+    background-color: $bg-color;
+    border: 1px solid $bd-color;
+    padding: $pd-y $pd-x;
+    border-radius: $r;
+    // &:hover{
+    //     // 3 thuộc tính: color, border-color, bg-color
+    // }
+}
+@mixin styleButtonHover($color, $bg-color, $bd-color) {
+    &:hover {
+        color: $color;
+        background-color: $bg-color;
+        border-color: $bd-color;
+    }
+}
+
+@mixin responsive($screen) {
+    // kiểm tra tên màn hình có tồn tại trong $breakpoints
+    @if (map-has-key($map: $breakpoints, $key: $screen)) {
+        // tìm thấy màn hình
+        //lấy giá trị từ tên màn hình
+        // $value: chứa giá trị lấy đc
+        $value: map-get(
+            $map: $breakpoints,
+            $key: $screen,
+        );
+
+        @media screen and (max-width: $value) {
+            @content;
+        }
+    } @else {
+        @warn "Màn hình không tồn tại";
+    }
+}

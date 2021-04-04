@@ -1,0 +1,61 @@
+.stayInfomed {
+    background-color: $base-color;
+    .stayInfomed__content {
+        width: 95%;
+        margin: auto;
+        .brandhub-hr {
+            border: 0;
+            height: 1px;
+            margin: 30px 30px;
+            position: relative;
+            &::before {
+                background: #333;
+                content: "";
+                display: block;
+                height: 1px;
+                left: -30px;
+                position: absolute;
+                right: -30px;
+            }
+        }
+        h3 {
+            @include styteText($color-white-0, $fs-4 - 6, $fw-normal);
+        }
+        .stayInfomed__item {
+            @include styteText($color-black-light, $fs-1 + 1, $fw-normal);
+            i {
+                @include styteText($color-black-light, $fs-3 + 3, $fw-normal);
+                padding: $pd-2 0;
+                &:hover {
+                    @include styteText($color-blue-1, $fs-3 + 3, $fw-normal);
+                    cursor: pointer;
+                }
+            }
+            img{
+                height: 2em;
+                width: 100%;
+                margin:0;
+            }
+        }
+        p{
+            @include styteText($color-black-light, $fs-1 + 1, $fw-normal);
+            margin-right: $mg-2;
+            margin-bottom: 0;
+        }
+        span{
+            a{
+                @include styteText($color-white-0, $fs-1 + 1, $fw-normal);
+                text-decoration: none;
+                &:hover{
+                    @include styteText($color-blue-1, $fs-1 + 1, $fw-normal); 
+                }
+            }
+        }
+    }
+}
+
+@include responsive('medium'){
+    .stayInfomed__img{
+        padding: $pd-2 0;
+    }
+}

@@ -1,0 +1,15 @@
+.brandhub {
+    padding: 30px 0;
+    background-color: $base-color;
+    .brandhub__content {
+        width: 95%;
+        margin: auto;
+        @include styteText($color-white-0, $fs-1 + 1, $fw-normal);
+        span {
+            padding-right: $pd-2;
+        }
+    }
+}
+@include responsive('medium'){
+    
+}
